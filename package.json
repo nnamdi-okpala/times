@@ -1,0 +1,19 @@
+{
+  "name": "times",
+  "version": "0.1.0",
+  "description": "A lightweight package for date-processing in realtime",
+  "main": "index.js",
+  "contributor": [
+    "Nnamdi Micheal Okpala"
+  ],
+  "scripts": {
+    "test": "tsc  && node index.js"
+  },
+  "author": "Nnamdi Micheal Okpala",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.134",
+    "chalk": "^2.4.2",
+    "typescript": "^3.5.1"
+  }
+}
