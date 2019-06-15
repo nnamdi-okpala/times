@@ -1,45 +1,49 @@
 "use strict";
 //@docs https://basarat.gitbooks.io/typescript/docs/
 /**
+ * 
  *	@interface {ClockInterface} The MAIN return interface for the ClockConstructor
  *	@interface {ClockConstructor} The implemented interface for the Clock Class
  * 	@interface {ClockProcessingNode} The MAIN interface for handling the namespace for the Clock Class
  * 	@class     {Clock} The class for creating a clock Object
- * 	@interface {ClockTimingInterface} The interface for processing  the time dynamical 
+ * 	@interface {ClockTimeProcessingInterface} The interface for processing  the time dynamical 
+ * 
+ * 	@type { datesArray } evaulates a arrays of string  
  * 
  */
 
- type dateArray = string[]
- interface ClockTimeProcessingInterface{
-	timer(): dateArray
- }
+ 
+export type datesArray = string[]
 
-class Timer implements ClockTimeProcessingInterface {
-	timer(): dateArray {
-		throw new Error("Method not implemented.");
-	}
+interface ClockTimeProcessingInterface {
 
 }
 
 interface ClockInterface {
-	count():void		//return a type of date object deconstructed from the dateConstructor
 
 }
 
 interface ClockConstructor {
-	new(date: string): ClockInterface,	
-	timer():ClockTimeProcessingInterface
-}
-
-class Clock implements ClockInterface {
-	count(): void {
-		throw new Error("Method not implemented.");
-	}
-	constructor(private date: string) {
-
-	}
+	new(date: string): ClockInterface,
 	
 }
 
+class Clock implements ClockInterface {
+	
+	constructor(private date: string) {
+
+	}
+
+}
 export { Clock };
 
+class Timer extends Clock implements ClockInterface {
+	
+}
+
+var createClock = function (date:string): ClockInterface {
+	return new Clock(date)
+}
+
+console.log(createClock("2001-05-19"))
+export { Timer }

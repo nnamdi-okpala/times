@@ -15,5 +15,8 @@
     "@types/lodash": "^4.14.134",
     "chalk": "^2.4.2",
     "typescript": "^3.5.1"
+  },
+  "dependencies": {
+    "calendar-dates": "^2.6.0"
   }
 }
